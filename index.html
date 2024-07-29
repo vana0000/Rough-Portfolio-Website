@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Van Thiang Portfolio Web
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Van Thiang</a></h1>
+						<nav>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gem"></span></div>
+							<h2>Hi! My name is Van Thiang</h2>
+							<p>I'm an aspiring Software Engineer <a></a></p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/rockwell.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Data Analyst Intern
+										</h2>
+										<p>As a Data Analyst Intern at Rockwell Automation, I optimized data pipelines using Python and Pandas, resulting in a 20% increase in data processing speed. I integrated data analytics solutions with software systems, reducing response times by 15%. Additionally, I created real-time data visualization dashboards using Tableau, providing stakeholders with enhanced insights and actionable data.</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/sig.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">SIG Discovery Fellow</h2>
+										<p>During my time as a Discovery Fellow at Susquehanna International Group, I collaborated with industry professionals and fellow attendees to refine algorithmic trading strategies. Leveraging advanced statistical models and predictive analytics, I explored quantitative trading strategies and software tools critical for efficient algorithmic trading. This experience provided me with deep insights into the financial sector and enhanced my technical skills in quantitative analysis.</p>									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/hs.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Headstarter AI Fellow</h2>
+										<p>As a Headstarter AI Fellow, I engaged in cutting-edge AI projects, focusing on developing and implementing machine learning models. This fellowship provided me with hands-on experience in AI, allowing me to work on real-world problems and contribute to innovative solutions. Through collaboration with peers and mentors, I honed my skills in AI and deep learning, preparing me for a future in the rapidly evolving field of artificial intelligence.</p>									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+						
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p>I would love to chat, please feel free to reach out!</p>
+						<form id="contact-form" onsubmit="submitForm(event)">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4" required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+						<ul class="contact">
+							<li class="icon solid fa-phone">(682) 320-1809</li>
+							<li class="icon solid fa-envelope"><a href="mailto:vanthiang4@gmail.com">vanthiang4@gmail.com</a></li>                                
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/van-thiang">https://www.linkedin.com/in/van-thiang</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li><a></a></li>
+						</ul>
+					</div>
+				</section>
+				
+				<script>
+					const scriptURL = '/https://script.google.com/macros/s/AKfycbzm3DZgbf99EVuKWQB65zKQTTZNJdGs3tN06ebsqQ8_S_2cmr-rMOLpdBgp56be9fzkUQ/exec'; // Replace with your deployed script URL
+				
+					function submitForm(event) {
+						event.preventDefault(); // Prevent form submission
+				
+						var form = document.getElementById('contact-form');
+						var formData = new FormData(form);
+				
+						var object = {};
+						formData.forEach(function(value, key) {
+							object[key] = value;
+						});
+						var json = JSON.stringify(object);
+				
+						fetch(scriptURL, {
+							method: 'POST',
+							body: json,
+							headers: {
+								'Content-Type': 'application/json'
+							}
+						}).then(response => {
+							alert('Your message has been saved.');
+							form.reset();
+						}).catch(error => {
+							console.error('Error!', error.message);
+							alert('There was an error saving your message.');
+						});
+					}
+				</script>
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
